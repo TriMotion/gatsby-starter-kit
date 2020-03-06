@@ -1,0 +1,110 @@
+//===================================================================
+//  STRIP-UNIT
+//===================================================================
+
+// @param {number} $value
+// @returns {number} $value with unit removed
+//
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+//===================================================================
+//  EM
+//===================================================================
+
+// @requires settings
+// @requires {function} strip-unit
+//
+// @param {number} $value - desired value in pixels
+// @param {number} $base [$root-font-size] - base font-size in pixels
+//
+// @returns {number} $value converted to em, or 0
+//
+@function em($value, $base: $root-font-size) {
+    $value: strip-unit($value);
+
+    @if $value == 0 {
+        @return $value;
+    }
+
+    @return $value / strip-unit($base) * 1em;
+}
+
+//===================================================================
+//  REM
+//===================================================================
+
+// @requires settings
+// @requires {function} strip-unit
+//
+// @param {number} $value - desired value in pixels
+//
+// @returns {number} $value converted to em, or 0
+//
+@function rem($value) {
+    $value: strip-unit($value);
+
+    @if $value == 0 {
+        @return $value;
+    }
+
+    @return $value / strip-unit($root-font-size) * 1rem;
+}
+
+//===================================================================
+//  GRID
+//===================================================================
+
+@function grid($value, $spacing: $base__gutter) {
+    // get the precentage based on the total colunms
+    // get the percantage minus the base gutter
+    $passed-percentage: 100 / 12 * $value;
+    $passed-spacing: 12 / $value;
+    $multiplier: $passed-spacing - 1;
+    $passed-margin: $spacing * $multiplier / $passed-spacing;
+
+    @return calc(#{$passed-percentage + "%"} - #{$passed-margin});
+}
+
+//===================================================================
+//  MEDIA-QUERY
+//===================================================================
+
+@mixin mq($break) {
+    @if $break == "mobile" {
+        @media (min-width: 0px) and (max-width: $mq--m) {
+            @content;
+        }
+    } @else if $break == "sb" {
+        @media (min-width: $mq--s + 1) {
+            @content;
+        }
+    } @else if $break == "ss" {
+        @media (min-width: $mq--ss + 1) {
+            @content;
+        }
+    } @else if $break == "tablet" {
+        @media (min-width: $mq--sm) {
+            @content;
+        }
+    } @else if $break == "laptop" {
+        @media (min-width: $mq--m) {
+            @content;
+        }
+    } @else if $break == "l" {
+        @media (min-width: $mq--l + 1) {
+            @content;
+        }
+    } @else if $break == "desktop" {
+        @media (min-width: $mq--xl) {
+            @content;
+        }
+    } @else if $break == "xxl" {
+        @media (min-width: $mq--xxl + 1) {
+            @content;
+        }
+    } @else {
+        @error "No value could be retrieved for `#{$break}`. ";
+    }
+}

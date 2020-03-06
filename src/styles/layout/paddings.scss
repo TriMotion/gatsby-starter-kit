@@ -1,0 +1,67 @@
+// Top
+.pt {
+    padding-top: $base;
+}
+
+.pt-s {
+    padding-top: $base * 0.5;
+}
+
+.pt-m {
+    padding-top: $base * 2;
+}
+
+.pt-l {
+    padding-top: $base * 5;
+}
+
+// Bottom
+.pb {
+    padding-bottom: $base;
+}
+
+.pb-s {
+    padding-bottom: $base * 0.5;
+}
+
+.pb-m {
+    padding-bottom: $base * 2;
+}
+
+.pb-l {
+    padding-bottom: $base * 5;
+}
+
+// Left
+.pl {
+    padding-left: $base;
+}
+
+.pl-s {
+    padding-left: $base * 0.5;
+}
+
+.pl-m {
+    padding-left: $base * 2;
+}
+
+.pl-l {
+    padding-left: $base * 5;
+}
+
+// Right
+.pr {
+    padding-right: $base;
+}
+
+.pr-s {
+    padding-right: $base * 0.5;
+}
+
+.pr-m {
+    padding-right: $base * 2;
+}
+
+.pr-l {
+    padding-right: $base * 5;
+}

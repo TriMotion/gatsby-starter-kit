@@ -1,0 +1,32 @@
+.flex {
+    display: flex;
+}
+
+.flex-align {
+    align-items: center;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-space {
+    justify-content: space-between;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-end {
+    align-self: flex-end;
+}

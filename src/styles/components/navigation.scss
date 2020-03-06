@@ -1,0 +1,48 @@
+.nav {
+    background-color: $c-white;
+    height: $base * 5;
+    border: 1px solid $c-border;
+    width: 100%;
+}
+
+.nav-desktop {
+    display: none;
+    @include mq(laptop) {
+        display: flex;
+    }
+}
+
+.nav-mobile {
+    display: flex;
+    @include mq(laptop) {
+        display: none;
+    }
+}
+
+.nav-mobile-btn-toggle {
+    position: relative;
+    cursor: pointer;
+    width: $base * 2;
+    height: $base * 2;
+    z-index: 5;
+}
+
+.nav-mobile-overlay {
+    background-color: $c-white;
+    padding: $base * 7 $base $base $base;
+
+    @include mq(laptop) {
+        display: none;
+    }
+}
+
+.nav-mobile-links {
+    padding: $base * 2 $base * 2;
+    width: 100%;
+    font-size: $base * 2.5;
+    text-align: center;
+
+    @include mq(laptop) {
+        display: none;
+    }
+}

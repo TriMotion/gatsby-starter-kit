@@ -1,0 +1,11 @@
+button {
+    -webkit-appearance: none !important;
+    writing-mode: none !important;
+    background-color: $c-white;
+    margin: 0;
+    padding: 0;
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: all !important;
+    }
+}

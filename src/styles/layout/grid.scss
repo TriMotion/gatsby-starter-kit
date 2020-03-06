@@ -1,0 +1,27 @@
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    max-width: 1380px;
+    margin: 0 16px;
+    @include mq(desktop) {
+        margin: 0 auto;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: grid(12);
+    margin-top: 12px;
+    margin-bottom: 12px;
+    @include mq(laptop) {
+        flex-basis: grid(6);
+    }
+}

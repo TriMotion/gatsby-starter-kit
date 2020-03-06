@@ -1,0 +1,17 @@
+html {
+    color: $c-text;
+    min-height: 100%; // [1]
+    -webkit-text-size-adjust: 100%; // [2]
+    -ms-text-size-adjust: 100%; // [2]
+    -moz-osx-font-smoothing: grayscale; // [3]
+    -webkit-font-smoothing: antialiased; // [3]
+    cursor: default;
+    font-style: normal;
+}
+
+body {
+    font-family: $font-family;
+    color: $c-text;
+    width: 100%;
+    overflow-x: hidden;
+}

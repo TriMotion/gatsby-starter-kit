@@ -1,0 +1,16 @@
+a,
+button {
+    color: $c-text;
+    text-decoration: none;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+
+.link-mobile {
+    margin-bottom: $base * 2;
+    text-align: center;
+    will-change: opacity, transform;
+    font-weight: 400;
+}

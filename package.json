@@ -15,11 +15,13 @@
   },
   "dependencies": {
     "gatsby": "^2.19.7",
+    "gatsby-cli": "^2.10.0",
+    "gatsby-plugin-sass": "^2.1.28",
+    "intersection-observer": "^0.7.0",
+    "node-sass": "^4.13.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
-  "devDependencies": {
-    "prettier": "^1.19.1"
+    "react-dom": "^16.12.0",
+    "react-spring": "^8.0.27"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,51 @@
+// Top
+.mt {
+    margin-top: $base;
+}
+
+.mt-m {
+    margin-top: $base * 2;
+}
+
+.mt-s {
+    margin-top: $base * 0.5;
+}
+
+.mt-l {
+    margin-top: $base * 5;
+}
+
+// Bottom
+.mb {
+    margin-bottom: $base;
+}
+
+.mb-m {
+    margin-bottom: $base * 2;
+}
+
+.mb-s {
+    margin-bottom: $base * 0.5;
+}
+
+.mb-l {
+    margin-bottom: $base * 5;
+}
+
+// Left
+.ml {
+    margin-left: $base;
+}
+
+.ml-s {
+    margin-left: $base * 0.5;
+}
+
+// Right
+.mr {
+    margin-right: $base;
+}
+
+.mr-s {
+    margin-right: $base * 0.5;
+}
