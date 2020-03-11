@@ -30,7 +30,7 @@
 .nav-mobile-overlay {
     background-color: $c-white;
     padding: $base * 7 $base $base $base;
-
+    z-index: 4;
     @include mq(laptop) {
         display: none;
     }

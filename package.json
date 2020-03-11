@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "gatsby-starter-kit",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
@@ -15,19 +15,16 @@
   },
   "dependencies": {
     "gatsby": "^2.19.7",
-    "gatsby-cli": "^2.10.0",
+    "gatsby-cli": "^2.10.6",
     "gatsby-plugin-sass": "^2.1.28",
+    "gatsby-source-prismic-graphql": "^3.5.0",
     "intersection-observer": "^0.7.0",
     "node-sass": "^4.13.1",
+    "prismic-reactjs": "^1.2.0",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
     "react-spring": "^8.0.27"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

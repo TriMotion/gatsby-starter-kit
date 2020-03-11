@@ -1,23 +1,24 @@
-import Head from "next/head";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
-export default ({
+const Head = ({
     title = "",
-    description = "",
+    desc = "",
     src = "",
     alt = "",
     url = "",
     keywords = "",
     type = "page"
 }) => (
-    <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+    <Helmet title={title}>
+        <meta name="description" content={desc} />
         <meta name="keywords" content={keywords} />
         <meta name="author" content="TriMotion" />
 
         <meta name="og:title" content={title} />
         <meta property="og:type" content={type} />
-        <meta property="og:description" content={description} />
+        <meta property="og:description" content={desc} />
         <meta property="og:site_name" content="TriMotion" />
         <meta property="og:locale" content="nl_NL" />
         <meta
@@ -30,7 +31,7 @@ export default ({
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        <meta name="twitter:description" content={desc} />
         <meta name="twitter:creator" content="@TriMotion" />
         <meta name="twitter:image:src" content={src} />
         <meta name="twitter:image:alt" content={alt} />
@@ -42,7 +43,7 @@ export default ({
             href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap"
             rel="stylesheet"
             async
-        ></link>
+        />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -77,5 +78,18 @@ export default ({
             content="../public/favicon/browserconfig.xml"
         />
         <meta name="theme-color" content="#000061" />
-    </Head>
+
+        
+    </Helmet>
 );
+
+Head.propTypes = {
+    title: PropTypes.string,
+    desc: PropTypes.string,
+    src: PropTypes.string,
+    alt: PropTypes.string,
+    url: PropTypes.string,
+    keywords: PropTypes.string
+};
+
+export default Head;
